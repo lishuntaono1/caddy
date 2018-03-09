@@ -46,3 +46,4 @@ import (
 	_ "github.com/mholt/caddy/caddyhttp/timeouts"
 	_ "github.com/mholt/caddy/caddyhttp/websocket"
 	_ "github.com/mholt/caddy/onevent"
+)

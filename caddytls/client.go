@@ -27,7 +27,6 @@ import (
 
 	"github.com/mholt/caddy"
 	"github.com/xenolf/lego/acme"
-<<<<<<< HEAD
 	"crypto/x509"
 	"crypto/x509/pkix"
 	"math/big"
@@ -39,8 +38,6 @@ import (
 	"encoding/pem"
 	"bytes"
 	"os"
-=======
->>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 )
 
 // acmeMu ensures that only one ACME challenge occurs at a time.
@@ -56,7 +53,6 @@ type ACMEClient struct {
 	storage      Storage
 }
 
-<<<<<<< HEAD
 var genCertificate = func(config *Config, parent *tls.Certificate, name string) (tls.Certificate, error){
 
 	var err error
@@ -104,7 +100,6 @@ var genCertificate = func(config *Config, parent *tls.Certificate, name string) 
 
 	var derBytes []byte
 	if derBytes, err = x509.CreateCertificate(rand.Reader, &template, parent.Leaf, publicKey(privKey), parent.PrivateKey); err != nil {
-		fmt.Println("===================================================")
 		return tls.Certificate{}, err
 	}
 
@@ -143,6 +138,8 @@ func pemBlockForKey(priv interface{}) *pem.Block {
 		return nil
 	}
 }
+
+// TODO: renew certificate
 
 var selfCAObtain = func (config *Config, name string)  error {
 	storage, err := config.StorageFor(config.CAUrl)
@@ -195,8 +192,6 @@ var selfCAObtain = func (config *Config, name string)  error {
 	return nil
 }
 
-=======
->>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 // newACMEClient creates a new ACMEClient given an email and whether
 // prompting the user is allowed. It's a variable so we can mock in tests.
 var newACMEClient = func(config *Config, allowPrompts bool) (*ACMEClient, error) {

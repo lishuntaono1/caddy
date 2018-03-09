@@ -179,10 +179,7 @@ func (cfg *Config) cacheUnmanagedCertificatePEMFile(certFile, keyFile string) er
 		return err
 	}
 	cfg.cacheCertificate(cert)
-<<<<<<< HEAD
 	cfg.SelfCAName = cert.Names[0]
-=======
->>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 	return nil
 }
 
@@ -355,11 +352,8 @@ func (cfg *Config) cacheCertificate(cert Certificate) Certificate {
 	cfg.certCache.Lock()
 	defer cfg.certCache.Unlock()
 
-<<<<<<< HEAD
 	// set self CA name to configuration if is self_ca
 
-=======
->>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 	// if this certificate already exists in the cache,
 	// use it instead of overwriting it -- very important!
 	if existingCert, ok := cfg.certCache.cache[cert.Hash]; ok {

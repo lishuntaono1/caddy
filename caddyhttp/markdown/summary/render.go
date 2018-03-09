@@ -17,11 +17,7 @@ package summary
 import (
 	"bytes"
 
-<<<<<<< HEAD
 	"gopkg.in/russross/blackfriday.v1"
-=======
-	"github.com/russross/blackfriday"
->>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 )
 
 // Ensure we implement the Blackfriday Markdown Renderer interface

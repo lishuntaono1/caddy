@@ -28,10 +28,7 @@ import (
 	"strings"
 
 	"github.com/mholt/caddy"
-<<<<<<< HEAD
 	"crypto/x509"
-=======
->>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 )
 
 func init() {
@@ -87,7 +84,6 @@ func setupTLS(c *caddy.Controller) error {
 			certificateFile = args[0]
 			keyFile = args[1]
 			config.Manual = true
-<<<<<<< HEAD
 		case 3:
 			if args[0] == "self_ca" {
 				config.SelfCAName = "ca"
@@ -99,8 +95,6 @@ func setupTLS(c *caddy.Controller) error {
 			}else{
 				return c.ArgErr()
 			}
-=======
->>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 		}
 
 		// Optional block with extra parameters
@@ -257,7 +251,6 @@ func setupTLS(c *caddy.Controller) error {
 			config.OnDemandState.AskURL = parsedURL
 		}
 
-<<<<<<< HEAD
 		// load root ca certificate
 		if len(args)==3 && args[0] == "self_ca" {
 			var err error
@@ -274,10 +267,6 @@ func setupTLS(c *caddy.Controller) error {
 
 		// don't try to load certificates unless we're supposed to
 		if (!config.Enabled || !config.Manual) {
-=======
-		// don't try to load certificates unless we're supposed to
-		if !config.Enabled || !config.Manual {
->>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 			continue
 		}
 
