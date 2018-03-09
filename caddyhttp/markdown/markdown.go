@@ -26,7 +26,11 @@ import (
 	"time"
 
 	"github.com/mholt/caddy/caddyhttp/httpserver"
+<<<<<<< HEAD
 	"gopkg.in/russross/blackfriday.v1"
+=======
+	"github.com/russross/blackfriday"
+>>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 )
 
 // Markdown implements a layer of middleware that serves

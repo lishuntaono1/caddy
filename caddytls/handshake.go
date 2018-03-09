@@ -212,7 +212,10 @@ func (cfg *Config) getCertDuringHandshake(name string, loadIfNecessary, obtainIf
 			}
 			return loadedCert, nil
 		}
+<<<<<<< HEAD
 		fmt.Println("=====================", err.Error())
+=======
+>>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 		if obtainIfNecessary {
 			// By this point, we need to ask the CA for a certificate
 

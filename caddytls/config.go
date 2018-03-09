@@ -139,10 +139,13 @@ type Config struct {
 	// handshakes and serve the right certificate given the SNI.
 	Certificates map[string]string
 
+<<<<<<< HEAD
 	// Self CA name, to get certificate from Certificates map
 	SelfCAName string
 	SelfRootCA *tls.Certificate
 
+=======
+>>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 	certCache *certificateCache // pointer to the Instance's certificate store
 	tlsConfig *tls.Config       // the final tls.Config created with buildStandardTLSConfig()
 }
@@ -198,6 +201,7 @@ func (c *Config) ObtainCert(name string, allowPrompts bool) error {
 		return nil
 	}
 
+<<<<<<< HEAD
 	// if SelfCAName is not empty, we must generate certificate
 	// from here
 	if c.SelfRootCA != nil {
@@ -223,6 +227,8 @@ func (c *Config) ObtainCert(name string, allowPrompts bool) error {
 		return nil
 	}
 
+=======
+>>>>>>> 5552dcbbc7f630ada7c7d030b37c2efdce750ace
 	storage, err := c.StorageFor(c.CAUrl)
 	if err != nil {
 		return err
